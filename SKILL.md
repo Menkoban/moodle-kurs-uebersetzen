@@ -37,10 +37,12 @@ schlägt Bildtempo. Lippensynchron wird es beim Tonaustausch ohnehin nicht.
 
 ## Voraussetzungen
 
+Vor dem ersten Lauf `python scripts/einrichten.py` aufrufen: das prüft, ob alles unten Genannte da ist. Fehlt etwas, den Nutzer fragen und erst nach seinem Ja mit `python scripts/einrichten.py --installieren` nachziehen.
+
 | Werkzeug | Wofür | Installation |
 |---|---|---|
 | Python 3.10+ | alle Skripte | vorhanden |
-| ffmpeg + ffprobe | Ton abtrennen, Video und Ton zusammenfügen | `winget install Gyan.FFmpeg` |
+| ffmpeg + ffprobe | Ton abtrennen, Video und Ton zusammenfügen | `winget install --id Gyan.FFmpeg -e` |
 | faster-whisper | Sprechtexte aus den Videos holen (lokal, offline) | `pip install faster-whisper` |
 | edge-tts | Vertonung (kostenlos, braucht Internet) | `pip install edge-tts` |
 

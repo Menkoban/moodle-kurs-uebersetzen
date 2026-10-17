@@ -30,6 +30,9 @@ git clone https://github.com/Menkoban/moodle-kurs-uebersetzen.git %USERPROFILE%\
 pip install -r %USERPROFILE%\.claude\skills\moodle-kurs-uebersetzen\requirements.txt
 ```
 
+Ob alles da ist (Python, ffmpeg, Pakete), zeigt `python scripts/einrichten.py` im
+Skill-Ordner; fehlt etwas, holt `python scripts/einrichten.py --installieren` es nach.
+
 Danach Claude Code neu starten. Der Skill meldet sich von selbst, sobald man zum
 Beispiel schreibt: *„Übersetze diesen Kurs ins Französische"* und die `.mbz` nennt.
 

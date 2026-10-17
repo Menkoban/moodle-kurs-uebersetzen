@@ -10,6 +10,10 @@ nächsten Start von selbst.
 
 ## 2. Werkzeuge installieren
 
+**Am einfachsten:** im Skill-Ordner `python scripts/einrichten.py` aufrufen. Es zeigt für jedes Werkzeug „ok“ oder „fehlt“ samt dem Befehl, der es behebt. Mit `python scripts/einrichten.py --installieren` holt es Fehlendes selbst nach (Pakete über pip, ffmpeg über winget bzw. Homebrew; unter Linux nennt es nur den Befehl). Nach winget ein neues Terminal öffnen.
+
+Von Hand geht es so:
+
 **ffmpeg** — trennt Ton ab und setzt Videos neu zusammen:
 
 ```
