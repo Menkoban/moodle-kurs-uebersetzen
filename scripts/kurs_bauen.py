@@ -78,14 +78,6 @@ def main(ordner, code, ziel, kursname=None, kurzname=None, quizid=None):
             print("files.xml      : %d Eintraege angepasst" % n)
             return xml_raus(root)
 
-        if name == "course/course.xml" and (kursname or kurzname):
-            root = ET.fromstring(daten)
-            if kursname:
-                root.find(".//fullname").text = kursname
-            if kurzname:
-                root.find(".//shortname").text = kurzname
-            return xml_raus(root)
-
         if name == "moodle_backup.xml":
             s = daten.decode("utf-8")
             if kursname:
@@ -122,6 +114,13 @@ def main(ordner, code, ziel, kursname=None, kurzname=None, quizid=None):
             elif quizid and "view.php?id=" in el.text:
                 el.text = link_anpassen(el.text)
                 geaendert = True
+        if name == "course/course.xml" and (kursname or kurzname):
+            # erst nach der Uebersetzung: die Kursbeschreibung soll mit uebersetzt werden
+            if kursname:
+                root.find(".//fullname").text = kursname
+            if kurzname:
+                root.find(".//shortname").text = kurzname
+            geaendert = True
         return xml_raus(root) if geaendert else None
 
     verzeichnis, geschrieben = [], set()
