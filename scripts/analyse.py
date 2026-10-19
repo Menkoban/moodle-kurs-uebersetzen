@@ -24,7 +24,9 @@ import xml.etree.ElementTree as ET
 H5P_TEXTFELDER = {"labelText", "scenename", "scenedescription", "text", "alt",
                   "contentName", "audioTrackTitle", "title"}
 # XML-Knoten mit sichtbarem Text, je Datei
-XML_TEXTKNOTEN = {"name", "summary", "intro", "content", "questiontext", "answertext", "feedback"}
+XML_TEXTKNOTEN = {"name", "summary", "intro", "content", "questiontext", "answertext", "feedback",
+                 # was Lernende nach dem Beantworten einer Testfrage lesen
+                 "generalfeedback", "correctfeedback", "partiallycorrectfeedback", "incorrectfeedback", "hint"}
 # Dateien ohne lernendensichtbaren Text
 XML_UEBERSPRINGEN = {"gradebook.xml", "roles.xml", "users.xml", "groups.xml", "badges.xml",
                      "completion.xml", "outcomes.xml", "scales.xml", "grade_history.xml"}
